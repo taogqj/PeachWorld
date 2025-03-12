@@ -16,10 +16,10 @@
 
 <script setup lang="ts">
 import Player from "./Player.vue";
-import floorImage from "../../assets/images/floor.png";
-import wallImage from "../../assets/images/wall.png";
-import { useMapStore } from "../../store/map";
-import { MapEnum } from "../../constant/base";
+import floorImage from "@/assets/images/floor.png";
+import wallImage from "@/assets/images/wall.png";
+import { useMapStore } from "@/store/game/sokoban/map";
+import { MapEnum } from "@/constant/base";
 
 const { map } = useMapStore();
 </script>

@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import keeperImage from "../../assets/images/keeper.png";
-import { usePlayerStore } from "../../store/player";
+import keeperImage from "@/assets/images/keeper.png";
+import { usePlayerStore } from "@/store/game/sokoban/player";
 import { computed, ref, onMounted, onUnmounted } from "vue";
 
 const useMove = () => {
@@ -70,3 +70,4 @@ const { position } = usePosition();
 </script>
 
 <style scoped></style>
+../../store/game/sokoban/tests/player

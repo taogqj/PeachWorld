@@ -1,17 +1,22 @@
 <template>
-  <div
-    class="flex items-center justify-center relative"
-    :style="{ height: '100vh' }"
-  >
+  <div class="flex items-center justify-center relative h-full">
     <Map />
-    <canvas id="canvas" ref="myCanvas" class="absolute"></canvas>
+    <canvas id="canvas" ref="myCanvas" class="absolute h-full"></canvas>
   </div>
 </template>
 
 <script setup lang="ts">
 import Map from "./Map.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, toRefs } from "vue";
 const myCanvas = ref<HTMLCanvasElement | null>(null);
+// const props = defineProps({
+//   gee: {
+//     type: Number,
+//     default: 0,
+//   },
+// });
+
+// const { gee } = toRefs(props);
 
 onMounted(() => {
   useBg();
