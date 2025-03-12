@@ -1,19 +1,7 @@
 <template>
-  <div>
-    <el-watermark :font="font" :content="text">
-      <Game />
-    </el-watermark>
-  </div>
+  <router-view />
 </template>
 
-<script setup lang="ts">
-import Game from "./components/game/Game.vue";
-import { reactive, ref } from "vue";
-const font = reactive({
-  color: "rgba(0, 0, 0, .15)",
-});
-
-const text = ref("Peach Tao");
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
