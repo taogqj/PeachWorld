@@ -13,6 +13,16 @@ const routes = [
         component: () => import("@/views/main/index.vue"),
       },
       {
+        path: "pokemon/world",
+        name: "world",
+        component: () => import("@/views/pokemon/world/index.vue"),
+      },
+      {
+        path: "pokemon/pokedex",
+        name: "pokedex",
+        component: () => import("@/views/pokemon/pokedex/index.vue"),
+      },
+      {
         path: "game/sokoban",
         name: "sokoban",
         component: () => import("@/views/game/sokoban/index.vue"),

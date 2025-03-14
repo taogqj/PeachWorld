@@ -13,6 +13,27 @@ export const useHomeStore = defineStore("home", {
         url: "Main",
       },
       {
+        name: "pokemon",
+        label: "宝可梦",
+        icon: "SwitchFilled",
+        children: [
+          {
+            name: "world",
+            path: "/pokemon/world",
+            label: "世界观",
+            icon: "MapLocation",
+            url: "World",
+          },
+          {
+            name: "pokedex",
+            path: "/pokemon/pokedex",
+            label: "图鉴",
+            icon: "Iphone",
+            url: "Pokedex",
+          },
+        ],
+      },
+      {
         name: "cruise",
         label: "胜地巡游",
         icon: "Guide",
@@ -25,13 +46,6 @@ export const useHomeStore = defineStore("home", {
             url: "Fatal",
           },
         ],
-      },
-      {
-        name: "pokemon",
-        path: "/main",
-        label: "宝可梦",
-        icon: "SwitchFilled",
-        url: "Pokemon",
       },
       {
         name: "fish",

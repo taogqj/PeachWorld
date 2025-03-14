@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full bg-black">
+  <div class="h-full bg-black main">
     <Game />
   </div>
 </template>

@@ -1,8 +1,6 @@
 <template>
-  <el-watermark :font="font" :content="text">
-    <div :style="{ height: '100vh' }">
-      <router-view />
-    </div>
+  <el-watermark :font="font" :content="text" :zIndex="99999">
+    <router-view />
   </el-watermark>
 </template>
 

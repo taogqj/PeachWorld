@@ -1,6 +1,6 @@
 <template>
-  <div class="flex w-full">
-    <router-link to="/main" :key="$route.fullPath">
+  <div class="flex w-full relative">
+    <router-link to="/main" :key="$route.fullPath" class="absolute z-1 left-4">
       <svg
         t="1741774481361"
         class="icon mt-3 cursor-pointer"

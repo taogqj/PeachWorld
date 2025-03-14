@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center relative h-full">
+  <div class="flex items-center justify-center relative h-full main">
     <Map />
     <canvas id="canvas" ref="myCanvas" class="absolute h-full"></canvas>
   </div>
