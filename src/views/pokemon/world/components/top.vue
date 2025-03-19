@@ -5,7 +5,15 @@
   </div>
   <el-carousel :interval="2000" type="card" height="400px" class="mb-carousel">
     <el-carousel-item v-for="item in img" :key="item.id">
-      <el-image :src="item.url" fit="fill" :alt="item.id" class="w-full" />
+      <el-image :src="item.url" fit="fill" :alt="item.id" class="w-full">
+        <template #placeholder>
+          <el-skeleton loading animated>
+            <template #template>
+              <el-skeleton-item class="mb-image" variant="image" />
+            </template>
+          </el-skeleton>
+        </template>
+      </el-image>
     </el-carousel-item>
   </el-carousel>
 </template>
@@ -27,6 +35,10 @@ const { img } = storeToRefs(useWorldStore());
 
 :deep(.el-carousel__indicators) {
   display: none !important;
+}
+
+.mb-image {
+  height: 400px;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,6 +64,10 @@ const { img } = storeToRefs(useWorldStore());
 
     :deep(.el-carousel__container) {
       height: 200px !important;
+    }
+
+    .mb-image {
+      height: 200px;
     }
   }
 }
