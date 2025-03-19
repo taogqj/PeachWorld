@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll" style="--t: 40s">
+  <div class="scroll mb-text-h-60" style="--t: 40s">
     <div>
       <span class="!inline-flex items-center">
         <svg
@@ -5400,9 +5400,7 @@
 <style lang="less" scoped>
 .scroll {
   position: relative;
-
   display: flex;
-  width: 100vw;
   overflow: hidden;
   mask-image: linear-gradient(
     90deg,
@@ -5466,8 +5464,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .scroll {
-    width: 95vw;
+  .mb-text-h-60 {
+    height: 60px;
   }
 }
 </style>

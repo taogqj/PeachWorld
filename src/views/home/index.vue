@@ -11,4 +11,8 @@ import Header from "./components/header.vue";
 import Footer from "./components/footer.vue";
 </script>
 
-<style scoped></style>
+<style scoped>
+:deep(.el-footer) {
+  padding: 0px !important;
+}
+</style>

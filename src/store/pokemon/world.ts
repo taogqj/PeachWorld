@@ -3,7 +3,9 @@ import axios from "axios";
 
 export const useWorldStore = defineStore("world", {
   state: () => ({
-    img: [{ id: "", name: "", url: "" }],
+    img: [
+      { id: "", name: "", url: "", details: "", geography: "", friends: "" },
+    ],
   }),
   actions: {
     async fetchPokemonImg() {
@@ -18,9 +20,15 @@ export const useWorldStore = defineStore("world", {
             id: path,
             name: pokemon.pokemon_region_zh,
             url: new URL(
+              `/src/assets/images/pokemon/world/preview/${path}.webp`,
+              import.meta.url
+            ).href,
+            details: new URL(
               `/src/assets/images/pokemon/world/${path}.png`,
               import.meta.url
             ).href,
+            geography: pokemon.geography,
+            friends: pokemon.friends,
           };
         });
       } catch (error) {}

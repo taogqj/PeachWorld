@@ -3,14 +3,9 @@
     <div class="text-[80px]">宝可梦世界</div>
     <div class="text-[28px]">一个独立于现实世界的地方</div>
   </div>
-  <el-carousel
-    :interval="2000000"
-    type="card"
-    height="400px"
-    class="mb-carousel"
-  >
+  <el-carousel :interval="2000" type="card" height="400px" class="mb-carousel">
     <el-carousel-item v-for="item in img" :key="item.id">
-      <el-image :src="item.url" fit="fill" :alt="item.id" />
+      <el-image :src="item.url" fit="fill" :alt="item.id" class="w-full" />
     </el-carousel-item>
   </el-carousel>
 </template>

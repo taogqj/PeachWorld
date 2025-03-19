@@ -11,14 +11,26 @@
 </template>
 
 <script setup lang="ts">
-import type { CSSProperties } from "vue";
 import Top from "./components/top.vue";
 import Area from "./components/area.vue";
 import wallImage from "@/assets/images/pokemon/list_bg.jpg";
+import type { CSSProperties } from "vue";
+import { onMounted } from "vue";
+import { useWorldStore } from "@/store/pokemon/world";
+
 const style: CSSProperties = {
   backgroundImage: `url(${wallImage})`,
   backgroundSize: "100% auto",
 };
+
+const getPokemonImgList = () => {
+  const { fetchPokemonImg } = useWorldStore();
+  onMounted(() => {
+    fetchPokemonImg();
+  });
+};
+
+getPokemonImgList();
 </script>
 
 <style scoped></style>
