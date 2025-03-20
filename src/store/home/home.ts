@@ -1,4 +1,6 @@
 import { defineStore } from "pinia";
+import { GiKey } from "vue3-icons/gi";
+import { CgPokemon } from "vue3-icons/cg";
 
 export const useHomeStore = defineStore("home", {
   state: () => ({
@@ -15,7 +17,7 @@ export const useHomeStore = defineStore("home", {
       {
         name: "pokemon",
         label: "宝可梦",
-        icon: "SwitchFilled",
+        icon: CgPokemon,
         children: [
           {
             name: "world",
@@ -42,7 +44,7 @@ export const useHomeStore = defineStore("home", {
             name: "fatal",
             path: "/game/sokoban",
             label: "致命游戏",
-            icon: "Bicycle",
+            icon: GiKey,
             url: "Fatal",
           },
         ],
@@ -58,6 +60,20 @@ export const useHomeStore = defineStore("home", {
             label: "鬼打墙",
             icon: "Grid",
             url: "Wall",
+          },
+          {
+            name: "water",
+            path: "/game/water",
+            label: "水波纹",
+            icon: "MoonNight",
+            url: "Water",
+          },
+          {
+            name: "fruit",
+            path: "/game/fruit",
+            label: "水果",
+            icon: "Watermelon",
+            url: "Fruit",
           },
         ],
       },

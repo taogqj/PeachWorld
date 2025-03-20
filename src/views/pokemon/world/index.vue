@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import Top from "./components/top.vue";
-import Area from "./components/area.vue";
+import Top from "./components/Top.vue";
+import Area from "./components/Area.vue";
 import wallImage from "@/assets/images/pokemon/list_bg.jpg";
 import type { CSSProperties } from "vue";
 import { onMounted } from "vue";

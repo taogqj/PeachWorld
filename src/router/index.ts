@@ -27,6 +27,16 @@ const routes = [
         name: "sokoban",
         component: () => import("@/views/game/sokoban/index.vue"),
       },
+      {
+        path: "game/water",
+        name: "water",
+        component: () => import("@/views/game/water/index.vue"),
+      },
+      {
+        path: "game/fruit",
+        name: "fruit",
+        component: () => import("@/views/game/fruit/index.vue"),
+      },
     ],
   },
 ];

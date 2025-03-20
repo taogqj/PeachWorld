@@ -9,14 +9,6 @@
 import Map from "./Map.vue";
 import { ref, onMounted, toRefs } from "vue";
 const myCanvas = ref<HTMLCanvasElement | null>(null);
-// const props = defineProps({
-//   gee: {
-//     type: Number,
-//     default: 0,
-//   },
-// });
-
-// const { gee } = toRefs(props);
 
 onMounted(() => {
   useBg();

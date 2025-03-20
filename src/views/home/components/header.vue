@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted } from "vue";
+import { onMounted } from "vue";
 import { useHomeStore } from "@/store/home/home";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
