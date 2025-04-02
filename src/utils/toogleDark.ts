@@ -6,15 +6,24 @@
  * @FilePath: \warblerJS\src\utils\toogleDark.ts
  */
 import { useHomeStore } from "@/store/home/home";
-import { onMounted, onUnmounted } from "vue";
+import { watch } from "vue";
+import { useRoute } from "vue-router";
+import { WaterMarkData } from "@/constant/base";
 
 export function toogleDark() {
+  const route = useRoute();
   const { toggleDark } = useHomeStore();
-  onMounted(() => {
-    toggleDark(true);
-  });
-
-  onUnmounted(() => {
-    toggleDark(false);
-  });
+  watch(
+    () => route.path,
+    (newPath) => {
+      if (
+        WaterMarkData[0]?.some((item: { id: string }) => item.id === newPath)
+      ) {
+        toggleDark(false);
+      } else {
+        toggleDark(true);
+      }
+    },
+    { immediate: true }
+  );
 }

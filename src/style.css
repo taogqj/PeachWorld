@@ -3,3 +3,19 @@
 .main {
     min-height: calc(100vh - 120px);
 }
+
+html {
+  --el-bg-color-overlay: rgba(0,0,0,0)!important;
+
+  .el-menu--popup  {
+    padding: 0px;
+  }
+
+  .el-popper {
+    border: 0px solid #000!important;
+  }
+
+  .el-menu--horizontal.el-menu {
+    border-bottom: 0px solid #000!important;
+  }
+}

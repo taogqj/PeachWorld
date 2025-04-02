@@ -5,6 +5,7 @@ import { CgPokemon } from "vue3-icons/cg";
 export const useHomeStore = defineStore("home", {
   state: () => ({
     isDark: false,
+    isHyaline: false,
     activeIndex: "main",
     menu: [
       {
@@ -95,6 +96,9 @@ export const useHomeStore = defineStore("home", {
     },
     changeActiveIndex(val: string) {
       this.activeIndex = val;
+    },
+    toggleHyaline(val: boolean) {
+      this.isHyaline = val;
     },
   },
 });

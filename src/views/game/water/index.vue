@@ -1,6 +1,6 @@
 <template>
   <div class="main flex justify-center items-center bg-blue-400">
-    <!-- 4 5 10 11 12 15 -->
+    <!-- 4 5 10 ✅11 ✅12 -->
     <svg
       width="400"
       height="400"
