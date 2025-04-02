@@ -4,7 +4,7 @@
     <el-main :class="`!p-0 ${!isHyaline ? 'mt-15' : null} main`">
       <router-view
     /></el-main>
-    <el-footer :class="isHyaline ? 'text-white bg-black' : null"
+    <el-footer :class="isHyaline ? 'text-white bg-[#141414]' : null"
       ><Footer
     /></el-footer>
   </el-container>
