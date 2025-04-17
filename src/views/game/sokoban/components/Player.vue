@@ -70,4 +70,3 @@ const { position } = usePosition();
 </script>
 
 <style scoped></style>
-../../store/game/sokoban/tests/player

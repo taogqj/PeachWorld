@@ -147,7 +147,7 @@ import p3 from "@/assets/images/p3.jpeg";
 import p4 from "@/assets/images/p4.jpeg";
 import p5 from "@/assets/images/p5.jpeg";
 
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -216,7 +216,7 @@ onMounted(() => {
     start: "top top",
     end: "+=600",
     scrub: 1,
-    pin: true,
+    pin: false,
     snap: {
       ease: "ease",
     },
@@ -256,6 +256,11 @@ onMounted(() => {
       opacity: 0,
       duration: 3,
     });
+});
+
+onUnmounted(() => {
+  gsap.globalTimeline.clear();
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 </script>
 
