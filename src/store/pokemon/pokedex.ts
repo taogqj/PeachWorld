@@ -57,7 +57,6 @@ export const usePokedexStore = defineStore("pokedex", {
         `/src/assets/images/pokemon/official/${data.index}-${data.name}.png`,
         import.meta.url
       ).href;
-      console.log(data.name);
       if (/undefined/.test(pic)) {
         try {
           const res = await axios({

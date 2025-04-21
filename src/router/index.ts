@@ -23,6 +23,11 @@ const routes = [
         component: () => import("@/views/pokemon/pokedex/index.vue"),
       },
       {
+        path: '/pokemon/detail/:id', // 动态路由参数
+        name: 'detail',
+        component: () => import('@/views/pokemon/detail/index.vue'),
+      },
+      {
         path: "game/sokoban",
         name: "sokoban",
         component: () => import("@/views/game/sokoban/index.vue"),
